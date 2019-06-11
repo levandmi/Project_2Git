@@ -63,17 +63,22 @@ def send():
 # create route that returns data for plotting
 @app.route("/api/fastfood")
 def pals():
-    results = db.session.query(FastFood.name, FastFood.restaurant, FastFood.menuitem).all()
+    # results = db.session.query(FastFood.name, FastFood.restaurant, FastFood.menuitem).all()
 
     data = db.session.query(FastFood.restaurant, func.count(FastFood.name))\
     .group_by(FastFood.restaurant).all()
 
-    # name = [result[0] for result in results]
-    # restaurant = [result[1] for result in results]
-    # food = [result[2] for result in results]
-
 
     return jsonify(data)
+
+@app.route("/api/sequence")
+def seq():
+    results = db.session.query(FastFood.name, FastFood.restaurant, FastFood.menuitem).all()
+
+
+
+    return jsonify([r._asdict() for r in results])
+
 
 
 if __name__ == "__main__":
