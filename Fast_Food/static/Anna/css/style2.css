@@ -1,0 +1,28 @@
+html,
+body,
+#bubble {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.tooltip {
+  display: none;
+  position: absolute;
+  width: 150px;
+  height: 40px;
+  padding: 1px;
+  font: 12px sans-serif;
+  text-align: center;
+  background:rgb(64, 102, 224);
+  border: 1;
+  border-radius: 1px;
+}
+body {
+  background-color: lightblue
+}
+h1{
+  text-align: center;
+}
+.center{
+  text-align: center
+}

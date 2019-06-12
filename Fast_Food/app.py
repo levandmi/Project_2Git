@@ -79,6 +79,13 @@ def seq():
 
     return jsonify([r._asdict() for r in results])
 
+@app.route('/Anna')
+def Anna():
+    return render_template('Anna.html')
+
+
+
+
 
 
 if __name__ == "__main__":
