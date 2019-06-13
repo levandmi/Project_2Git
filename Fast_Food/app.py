@@ -84,8 +84,14 @@ def Anna():
     return render_template('Anna.html')
 
 
+@app.route('/Kim')
+def Kim():
+    return render_template('Kim.html')
 
 
+@app.route('/Cristian')
+def Cristian():
+    return render_template('Cristian.html')
 
 
 if __name__ == "__main__":
